@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravador de Áudio Premium</title>
+    <meta name="description" content="Um gravador de áudio moderno e elegante com visualizador em tempo real.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="recorder-container">
+        <header class="recorder-header">
+            <h1>Gravador de Som</h1>
+            <div class="status-badge" id="statusBadge">Pronto</div>
+        </header>
+
+        <div class="visualizer-container">
+            <canvas id="visualizer" width="600" height="200"></canvas>
+            <div class="timer" id="timer">00:00</div>
+        </div>
+
+        <div class="controls">
+            <button id="btnStop" class="control-btn secondary" disabled title="Parar [S]">
+                <span class="material-symbols-rounded">stop</span>
+            </button>
+
+            <button id="btnRecord" class="control-btn primary" title="Gravar [R]">
+                <div class="record-icon"></div>
+                <span class="material-symbols-rounded play-icon" style="display: none;">mic</span>
+            </button>
+
+            <button id="btnDownload" class="control-btn secondary" disabled title="Baixar">
+                <span class="material-symbols-rounded">download</span>
+            </button>
+        </div>
+
+        <div class="playlist" id="playlist">
+            <!-- Recordings will appear here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
